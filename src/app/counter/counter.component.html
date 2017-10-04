@@ -1,0 +1,66 @@
+<p>Number: {{counter}}</p>
+<input (keyup)="display()" value={{counter}} />
+<button (click)="increment()">Increment </button>
+<button (click)="decrement()">Decrement </button>
+<input (keyup)="display1()" value={{counter}} />
+
+
+<!--
+<form>
+    <div>
+        <tr>
+            <td> <label for="name">Name</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="name" name="name"></td>
+        </tr>
+    </div>
+    <div>
+        <tr>
+            <td><label for="id">Id</label></td>
+        </tr>
+        <tr>
+            <td><input type="number" [(ngModel)]="id" name="id"></td>
+        </tr>
+    </div>
+    <div>
+        <tr>
+            <td><label for="street">street</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="address.street" name="street"></td>
+        </tr>
+    </div>
+    <div>
+        <tr>
+            <td> <label for="city">City</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="address.city" name="city"></td>
+        </tr>
+    </div>
+    <div>
+        <tr>
+            <td><label for="pincode">Pincode</label></td>
+        </tr>
+        <tr>
+            <td> <input type="number" [(ngModel)]="address.pincode" name="pincode"></td>
+        </tr>
+    </div>
+</form>-->
+<br>
+<br>
+
+<form (submit)="submitted(ff.value)">
+    <label for="sub">add flowers </label>
+    <input type="text" #ff />
+</form><br>
+
+
+<button (click)="onclick()">flower push</button>
+<button (click)="offclick()">flower pop</button>
+
+
+<ul>
+    <li *ngFor="let f of flowers">{{f}}<button (click)="delete(f)">x</button></li>
+</ul>
